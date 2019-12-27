@@ -1,0 +1,50 @@
+.container {
+    position: relative;
+    min-width: 320px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1310px;
+
+    &--medium {
+        max-width: 1270px;
+    }
+
+    &--small {
+        max-width: 1170px;
+    }
+
+    &--xsmall {
+        max-width: 970px;
+    }
+
+    &--tiny {
+        max-width: 860px;
+    }
+
+    &--xtiny {
+        max-width: 810px;
+    }
+}
+
+.row {
+    &--less-spacing {
+        margin-left: -10px;
+        margin-right: -10px;
+
+        [class*=col] {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+}
+
+.flex-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.no-padding-right {
+    padding-right: 0;
+}
