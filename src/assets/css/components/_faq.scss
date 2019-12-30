@@ -2,12 +2,12 @@
     &__intro {
         padding-top: 45px;
         margin-bottom: 60px;
-        text-align: center; 
+        text-align: center;
 
         .icon__svg {
             font-size: 27px;
             // color: $yellow;
-            
+
             // @include respond-to(600px) {
             //     font-size: 50px;
             // }
@@ -50,7 +50,8 @@
             transition: .1s background-color ease-in-out, .1s color ease-in-out, .1s border-color ease-in-out;
             cursor: pointer;
 
-            &:hover, &:active {
+            &:hover,
+            &:active {
                 background-color: darken(#FFF, 1%);
             }
 
@@ -67,36 +68,52 @@
                     transform: rotate(270deg);
                 }
             }
+
+        }
+
+        .notActive {
+            display: none;
         }
 
         .question {
-            padding: 14px 59px 14px 19px;
-            font-size: 17px;
-            font-weight: 300;
             background-color: #f8f8f8;
-            border: 1px solid #f8f8f8;
-            border-bottom-color: #DBDBDB;
-            cursor: pointer;
-            transition: .1s background-color ease-in-out, .1s border-color ease-in-out;
 
-            &:hover, &:active {
+
+            h4 {
+                padding: 14px 59px 14px 19px;
+                font-size: 17px;
+                font-weight: 300;
+                border: 1px solid #f8f8f8;
+                border-bottom-color: #DBDBDB;
+                cursor: pointer;
+                transition: .1s background-color ease-in-out, .1s border-color ease-in-out;
+
+                .icon__svg {
+                    top: 19px;
+                    margin-top: 0;
+                }
+            }
+
+            &:hover,
+            &:active {
                 background-color: darken(#f8f8f8, 3%);
                 border-color: darken(#f8f8f8, 3%);
                 border-bottom-color: #DBDBDB;
             }
 
-            .icon__svg {
-                top: 19px;
-                margin-top: 0;
-            } 
-            
+
+
             &[aria-expanded=true] {
-                margin-top: -1px;
+
                 background-color: #FFF;
-                border-color: #979797;
-                border-bottom-color: #FFF;
-                font-weight: bold;
-                color: #009cde;
+
+                h4 {
+                    margin-top: -1px;
+                    border-color: #979797;
+                    border-bottom-color: #FFF;
+                    font-weight: bold;
+                    color: #009cde;
+                }
 
                 .icon__svg {
                     transform: rotate(270deg);
