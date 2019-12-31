@@ -1,0 +1,25 @@
+[{
+        "title": "Reserveringen",
+        "QandA": [{
+                "question": "Ik heb geen bevestigingsscherm gezien en ik heb ook geen e-mail ontvangen. Is mijn reservering wel verwerkt?",
+                "answer": "Als je geen bevestigingsscherm met reserveringsnummer hebt gezien na het afronden van je reservering is er iets misgegaan in het reserveringsproces en krijg je ook geen bevestigingsmail. Stuur in dit geval een mail naar"
+            },
+            {
+                "question": "Wat moet ik doen als ik geen bevestigingsmail heb ontvangen?",
+                "answer": "Na de het afronden van de aanvraag, als je de betaalgegevens hebt ingevoerd, ontvang je direct een bevestiging per e-mail. Als dat niet het geval is, kan het zijn dat de e-mail in je spambox terecht is gekomen. Het kan ook zijn dat je een fout hebt gemaakt in uw e-mailadres. Neem in dat geval contact op via"
+            }
+        ]
+    },
+    {
+        "title": "Betalingen",
+        "QandA": [{
+                "question": "question",
+                "answer": "answer"
+            },
+            {
+                "question": "Ik heb geen bevestigingsscherm gezien en ik heb ook geen e-mail ontvangen. Is mijn reservering wel verwerkt?",
+                "answer": "Als je geen bevestigingsscherm met reserveringsnummer hebt gezien na het afronden van je reservering is er iets misgegaan in het reserveringsproces en krijg je ook geen bevestigingsmail. Stuur in dit geval een mail naar"
+            }
+        ]
+    }
+]

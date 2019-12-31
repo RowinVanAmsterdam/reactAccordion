@@ -4,6 +4,7 @@ import SingleCollapse from './SingleCollapse';
 import '../../../assets/css/base/_grid.scss';
 import '../../../assets/css/layout/_icons.scss';
 import '../../../assets/css/components/_faq.scss';
+import FAQData from '../../../static/FAQ-Data.json';
 
 const Accordion = () => {
 
@@ -18,18 +19,41 @@ const Accordion = () => {
 
     return (
         <div className='container container--xtiny'>
-            <article className='faq__block' id='content-1'>
+            {FAQData.map((FAQDetail, index) => {
+                return <article className='faq__block' id='content-1'>
                 <h3 onClick={toggleAccordion} aria-expanded={isTrue}>
-                    Reserveringen
+                    {FAQDetail.title}
                     <Icon name='arrow-right-thick' className='icon__svg' />
                 </h3>
+
+
                 <ul className={active} id='questions-0' aria-expanded={isTrue}>
-                    <SingleCollapse />
-                    <li className='question'>FAQ2</li>
-                    <li className='question'>FAQ3</li>
+                    <SingleCollapse 
+                    question='Ik heb geen bevestigingsscherm gezien en ik heb ook geen e-mail ontvangen. Is mijn reservering wel verwerkt?' 
+                    answer='Als je geen bevestigingsscherm met reserveringsnummer hebt gezien na het afronden van je reservering is er iets misgegaan in het reserveringsproces en krijg je ook geen bevestigingsmail. Stuur in dit geval een mail naar'/>
+                    <SingleCollapse question='question' answer='answer' />
+                    <SingleCollapse question='question' answer='answer' />
                 </ul>
             </article>
+
+            })}
         </div>
+        // <div className='container container--xtiny'>
+        //     <article className='faq__block' id='content-1'>
+        //         <h3 onClick={toggleAccordion} aria-expanded={isTrue}>
+        //             Reserveringen
+        //             <Icon name='arrow-right-thick' className='icon__svg' />
+        //         </h3>
+        //         <ul className={active} id='questions-0' aria-expanded={isTrue}>
+        //             <SingleCollapse
+        //                 question='Ik heb geen bevestigingsscherm gezien en ik heb ook geen e-mail ontvangen. Is mijn reservering wel verwerkt?'
+        //                 answer='Als je geen bevestigingsscherm met reserveringsnummer hebt gezien na het afronden van je reservering is er iets misgegaan in het reserveringsproces en krijg je ook geen bevestigingsmail. Stuur in dit geval een mail naar'/>
+        //             <SingleCollapse question='question' answer='answer' />
+        //             <SingleCollapse question='question' answer='answer' />
+        //         </ul>
+        //     </article>
+        // </div>
+
     );
 };
 
