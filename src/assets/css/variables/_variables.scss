@@ -1,0 +1,86 @@
+/* Colors */
+$color-01:      #00418f;
+$color-02:      #009cde;
+$color-03:      #00adf6;
+$color-04:      #f2fafd;
+$color-05:      #ffd100;
+$color-06:      #e54800;
+$color-07:      #7ed321;
+$color-08:      #ccc;
+$color-09:      #d8d8d8;
+$color-10:      #f8f8f8;
+$color-11:      #E7E7E7;
+$color-12:      #f4f4f4;
+$color-danger:  #ff1744;
+$color-bad:     #f39100;
+$color-good:    #00a836;
+$color-verygood:#007536;
+$color-text:    #4a4a4a;
+$color-text2:   #9b9b9b;
+
+// old color names, for legacy functionality
+$blue-dark:                 $color-01;
+$blue-light:                $color-02;
+$blue-button:               $color-03;
+$cookie-bar:                $color-04;
+$yellow:                    $color-05;
+$orange-dark:               $color-06;
+$green:                     $color-07;
+$gray-light:                $color-08;
+$error:                     $color-danger;
+$bad-inspectieKids :        $color-bad;
+$good-inspectieKids :       $color-good;
+$veryGood-inspectieKids :   $color-verygood;
+$border-gray :              $color-09;
+$text-color:                $color-text;
+$text-color-light:          $color-text2;
+
+/* Fonts */
+$icon-font-path: '../../fonts/';
+$font-family-headings: Anwb, Arial, sans-serif;
+$font-family-sans-serif: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-base: $font-family-sans-serif;
+
+$font-size-base: 15px;
+
+/* Characters */
+$breadcrumb-separator: '>';
+
+/* Sizes */
+$grid-float-breakpoint: 860px;
+$header-height-mobile: 48px;
+$header-height: 56px;
+
+$screen-md-min: 1000px;
+
+$max-content-width: 1170px;
+
+
+
+/* Z-index */
+$z-index: (
+    overlay: 9998,
+    sticky-sub-menu: 9998,
+    overlay-highlight: 9999,
+    overlay--menu: 9999,
+    sticky: 10000,
+    overlay--fab: 10005,
+    fab: 10010,
+    mobile-search-comps: 10020,
+    datepicker: 10020
+);
+
+$base-spacing:          15px;
+$xs-spacing:            10px;
+$s-spacing:             20px;
+$m-spacing:             25px;
+$l-spacing:             50px;
+$xl-spacing:            75px;
+$xxl-spacing:           100px;
+
+$breakpoints: (  
+	"S":	600px,
+    "M":	$grid-float-breakpoint, // 860px
+    "L":    900px,
+	"XL":	$screen-md-min // 1000px
+);

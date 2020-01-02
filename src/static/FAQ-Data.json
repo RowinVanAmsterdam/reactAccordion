@@ -1,6 +1,6 @@
 [{
         "title": "Reserveringen",
-        "QandA": [{
+        "qAndA": [{
                 "question": "Ik heb geen bevestigingsscherm gezien en ik heb ook geen e-mail ontvangen. Is mijn reservering wel verwerkt?",
                 "answer": "Als je geen bevestigingsscherm met reserveringsnummer hebt gezien na het afronden van je reservering is er iets misgegaan in het reserveringsproces en krijg je ook geen bevestigingsmail. Stuur in dit geval een mail naar"
             },
@@ -12,7 +12,7 @@
     },
     {
         "title": "Betalingen",
-        "QandA": [{
+        "qAndA": [{
                 "question": "question",
                 "answer": "answer"
             },

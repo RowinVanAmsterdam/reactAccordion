@@ -1,16 +1,12 @@
 import * as React from 'react';
 import Icon from '../Shared/Icon';
 import SingleCollapse from './SingleCollapse';
-import '../../../assets/css/base/_grid.scss';
-import '../../../assets/css/layout/_icons.scss';
-import '../../../assets/css/components/_faq.scss';
 import FAQData from '../../../static/FAQ-Data.json';
 
 const Accordion = () => {
 
     const [active, setActive] = React.useState('notActive');
     const [isTrue, setTrue] = React.useState(false);
-
 
     const toggleAccordion = () => {
         setActive(active === 'notActive' ? 'active' : 'notActive');
@@ -19,8 +15,8 @@ const Accordion = () => {
 
     return (
         <div className='container container--xtiny'>
-            {FAQData.map((FAQDetail, index) => {
-                return <article className='faq__block' id='content-1'>
+            {FAQData.map((FAQDetail) => {
+                return <article key={FAQDetail.title} className='faq__block' id='content-1'>
                 <h3 onClick={toggleAccordion} aria-expanded={isTrue}>
                     {FAQDetail.title}
                     <Icon name='arrow-right-thick' className='icon__svg' />

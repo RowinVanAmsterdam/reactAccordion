@@ -1,8 +1,8 @@
 import * as React from 'react';
-import IconSprite from './IconSprite';
+import IconSprite, { sprite } from './IconSprite';
 
 export interface IconProps {
-    name: string;
+    name: keyof typeof sprite;
     className?: string;
 }
 

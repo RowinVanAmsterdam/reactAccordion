@@ -1,0 +1,46 @@
+@mixin respond-to($size, $max-size: null) {
+    @if ($max-size) {
+        @media only screen and (min-width: $size) and (max-width: $max-size) {
+            @content;
+        }
+    } @else {
+        @media only screen and (min-width: $size) {
+            @content;
+        }
+    }
+}
+
+@mixin respond-to-max($size) {
+    @media (max-width: $size - 1px) {
+        @content;
+    }
+}
+
+// our standard media-query mixin, made to be backwards-compatible with the solution here
+@mixin mq($media-query){
+	@each $breakpoint-name, $breakpoint-px in $breakpoints {
+
+		@if $breakpoint-name == $media-query {
+            @include respond-to($breakpoint-px, $max-size: null) { @content; }
+		}
+
+		/* max-width versions, 'desktop first' */
+		@if $breakpoint-name + "-max" == $media-query {
+            @include respond-to-max($breakpoint-px) { @content; }
+		}
+	}
+}
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content;}
+  :-moz-placeholder           {@content;}
+  ::-moz-placeholder          {@content;}
+  :-ms-input-placeholder      {@content;}  
+}
+
+@mixin include-placeholder {
+  &::-webkit-input-placeholder {@content;}
+  &:-moz-placeholder           {@content;}
+  &::-moz-placeholder          {@content;}
+  &:-ms-input-placeholder      {@content;}  
+}

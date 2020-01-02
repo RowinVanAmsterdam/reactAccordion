@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 export interface IconSpriteProps {
-    name: string;
+    name: keyof typeof sprite;
     className?: string;
 }
 
@@ -273,7 +273,7 @@ export const sprite = {
 };   
 
 const IconSprite: React.SFC<IconSpriteProps> = ({name, className}) => {
-    return React.cloneElement(sprite['arrow-right-thick'], {className: className});
+    return React.cloneElement(sprite[name], {className: className});
 };
 
 export default IconSprite;
