@@ -90,7 +90,7 @@
         "title": "Overige vragen",
         "qAndA": [{
             "question": "Mijn vraag staat er niet tussen, hoe kan ik contact opnemen?",
-            "answer": "Mocht je je antwoord niet kunnen terugvinden, dan ontvangen wij de vraag graag per e-mail via reserveringen@anwb.nl. Wij proberen de mails zo spoedig mogelijk te beantwoorden. Op werkdagen zijn wij telefonisch te bereiken op 088 - 269 2222 tussen 08.30 en 18.00 uur en op zaterdag van 10:00 tot 16:00 uur."
+            "answer": "Mocht je je antwoord niet kunnen terugvinden, dan ontvangen wij de vraag graag per e-mail via reserveringen@anwb.nl. Wij proberen de mails zo spoedig mogelijk te beantwoorden. Op werkdagen zijn wij telefonisch te bereiken op 088 - 269 2222 tussen 08.30 en 18.00 uur en op zaterdag van 10:00 tot 16:00 uur. <a href=\"mailto:reserveringen@anwb.nl\">reserveringen@anwb.nl</a>"
         }]
     }
 ]

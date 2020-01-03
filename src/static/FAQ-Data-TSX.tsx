@@ -1,0 +1,113 @@
+import * as React from 'react';
+
+const FAQDataTsx = () => {
+    const mailTo = <a href="mailto:reserveringen@anwb.nl">reserveringen@anwb.nl</a>;
+
+
+    const jsonData = [
+        {
+            title: 'Reserveringen',
+            qAndA: [
+                {
+                    question: 'Ik heb geen bevestigingsscherm gezien en ik heb ook geen e-mail ontvangen. Is mijn reservering wel verwerkt?',
+                    answer: 'Als je geen bevestigingsscherm met reserveringsnummer hebt gezien na het afronden van je reservering is er iets misgegaan in het reserveringsproces en krijg je ook geen bevestigingsmail. Stuur in dit geval een mail naar reserveringen@anwb.nl met vermelding van de naam van de camping, je keuze voor een standplaats of huuraccommodatie en het tijdstip van je poging.'
+                },
+                {
+                    question: 'Wat moet ik doen als ik geen bevestigingsmail heb ontvangen?',
+                    answer: 'Na de het afronden van de aanvraag, als je de betaalgegevens hebt ingevoerd, ontvang je direct een bevestiging per e-mail. Als dat niet het geval is, kan het zijn dat de e-mail in je spambox terecht is gekomen. Het kan ook zijn dat je een fout hebt gemaakt in uw e-mailadres. Neem in dat geval contact op via reserveringen@anwb.nl.'
+                },
+                {
+                    question: 'Wij hebben een reserveringsaanvraag gedaan. Wat gebeurt er nu?',
+                    answer: 'Een camping moet een reservering binnen 72 uur afhandelen. Gebruikelijk gebeurt dat binnen een paar uur of anders de volgende dag. De ANWB volgt de reserveringen en neemt waar nodig contact op met de camping om alsnog een antwoord op de reserveringsaanvraag te krijgen. Meestal zal de camping de aanvraag bevestigen. Soms is dat niet mogelijk, omdat de camping niet meer kan voldoen aan uw extra wensen of omdat de kampeerplaats of huuraccommodatie inmiddels al verhuurd is.'
+                },
+                {
+                    question: 'Mijn reservering is afgewezen terwijl ik wel een aanvraag kon doen. Hoe kan dat?',
+                    answer: 'De meeste campings houden hun planning goed bij. Het kan zijn dat de camping elke dag nog een aantal plaatsen beschikbaar heeft, maar dat ze jullie niet op één plek kunnen huisvesten voor een langere periode. De camping wijst uw aanvraag dan af. Dit speelt vooral eind juni, juli en de eerste helft van augustus. Het kan ook zijn dat iemand je net voor was, aan de balie, via de telefoon of via internet.'
+                },
+                {
+                    question: 'Krijg ik bij een reservering reisbescheiden toegestuurd?',
+                    answer: 'Je ontvangt geen reisbescheiden van de ANWB. De bevestiging per e-mail is meteen het bewijs van de boeking. We adviseren je deze bevestigingsmail te printen en mee te nemen op vakantie. Het komt vaak voor dat een camping je van tevoren nog een bevestiging per post stuurt.'
+                }
+            ]
+        },
+        {
+            title: 'Betalen',
+            qAndA: [
+                {
+                    question: 'Wat zijn de betaalmogelijkheden voor de aanbetaling?',
+                    answer: 'De campings die meedoen met het reserveringssysteem geven zelf aan hoe de klant een aanbetaling kan doen. De mogelijkheden zijn: creditcard, iDEAL, bankoverschrijving en na ontvangst van de rekening (de camping stuurt dan een rekening aan de klant, per mail of per post). De manieren van betalen staan in de laatste stap van het reserveren. Bij het zoeken van een camping kun je ook filteren op betaalmogelijkheden.'
+                },
+                {
+                    question: 'Mijn reserveringsaanvraag is afgewezen. Wat gebeurt er met mijn aanbetaling?',
+                    answer: 'De aanbetaling wordt pas uitgevoerd wanneer de aanvraag is geaccepteerd door de camping. Als een reservering wordt geweigerd of verloopt, krijgt de camping niet de beschikking over de creditcardgegevens en vindt er dus ook geen aanbetaling plaats. Bij een betaling via iDEAL krijg je geen mail met het betaallinkjes en bij een betaling d.m.v. een bankoverschrijving krijg je geen bevestigingsmail met de betaalgegevens. '
+                },
+                {
+                    question: 'Bij de reservering hebben we een aanbetaling gedaan. Hoe en wanneer moeten we het restant betalen?',
+                    answer: 'In de verkoopvoorwaarden staat aangegeven hoe en wanneer je de rest van het bedrag betaalt. Je kunt deze verkoopvoorwaarden vinden in de laatste stap van de reservering. Op veel campings is het zo dat je het restant van het totaalbedrag ter plekke op de camping betaalt. Check tijdig bij de receptie of je dat met je pinpas of creditcard kunt doen. Je kunt dit ook zien op de pagina van de camping op anwbcamping.nl. Sommige campings willen het volledige bedrag minimaal vier weken voor je aankomst ontvangen hebben. Dit geldt zeker voor huuraccommodatie. Je krijgt daar tijdig bericht over van de camping.'
+                },
+                {
+                    question: 'Hoe kan in aanmerking komen voor Camping Key Europe-korting?',
+                    answer: 'Als je in het bezit bent van een CKE-kaart, dan krijg je op de aangesloten campings in de voordeelperiode korting. Deelnemende campings aan het CKE-programma vind je in het CKE-thema. Bij het zoeken naar een staanplaats of huuraccommodatie krijg je automatisch de eventuele aanbiedingen te zien die binnen die periode geldig zijn. In stap 1 van het reserveringsformulier vragen we je dan om uw CKE-nummer in te voeren. Het nummer wordt bij aankomst op de camping gecontroleerd.'
+                },
+                {
+                    question: 'Moet ik voor een huuraccommodatie ook borg betalen?',
+                    answer: 'Sommige campings vragen borg voor het verblijf in een huuraccommodatie. Soms staat het bedrag daarvan vermeld en soms ook niet, dan heeft de camping dat niet opgegeven. Houd er rekening mee dat de borg betaald moet worden bij aankomst op de camping en dat deze niet bij de reservering is inbegrepen. De hoogte van de borg is afhankelijk van het land en regio van de camping.'
+                },
+                {
+                    question: 'Foutmelding bij iDEAL-betaling',
+                    answer: 'Een betaallink kan maar één keer werken; dit om een dubbele betaling te voorkomen. Als je een foutmelding krijgt bij het betalen met iDEAL, neem dan contact op met reserveringen@anwb.nl. Wij sturen je dan de IBAN van de camping toe.'
+                },
+                {
+                    question: 'Ik heb geen creditcard hoe kan ik de camping nu boeken?',
+                    answer: 'Een prepaid creditcard is handig wanneer je een camping wil boeken die alleen creditcard accepteert. Goedkoper dan de meeste normale creditcards en door iedereen aan te vragen. Zodra je de Card ontvangen hebt, kun je geld op jouw ANWB Prepaid Card storten en werkt de Card hetzelfde als een creditcard. Vraag hier de ANWB Prepaid Creditcard aan.'
+                }
+            ]
+        },
+        {
+            title: 'Camping / accommodatie',
+            qAndA: [
+                {
+                    question: 'Hoe kan ik bij reservering een voorkeur aangeven voor een bepaalde kampeerplaats op de camping?',
+                    answer: 'Wanneer je graag bij familie of vrienden wilt staan, of juist vlak bij het water of ver van de speeltuin, dan kun je je voorkeur aangeven in het veld Opmerkingen in de tweede stap van het reserveringsformulier. Doe dat in de taal van het land van de camping of in het Engels. Campings houden zoveel mogelijk rekening met deze wensen en zullen aangeven of ze daar al dan niet aan kunnen voldoen. Houd er rekening mee dat het voor de camping lastig is om in het hoogseizoen aan alle wensen te voldoen.'
+                },
+                {
+                    question: 'Hoe kunnen we met meer gezinnen tegelijkertijd reserveren?',
+                    answer: 'Die gezinnen maken ongeveer tegelijkertijd hun reservering en geven dan bij de Opmerkingen van stap 2 van het reserveringsproces aan dat ze per se of het liefst bij of naast elkaar willen staan. Vermeld de achternaam van het andere gezin. Realiseer je wel dat hoe later je boekt, hoe moeilijker het voor de camping wordt om hier rekening mee te houden.'
+                },
+                {
+                    question: 'Wat zijn de exacte afmetingen van de kampeerplaats?',
+                    answer: 'Alle informatie die de ANWB heeft ontvangen over de standplaatsen staat vermeld op de website. Mocht je zeker willen zijn dat de plaats groot genoeg is, dan is het verstandig de afmetingen van je caravan/tent of vouwwagen door te geven in de tweede stap van het reserveringsformulier. Dan kan de campingeigenaar daar rekening mee houden en eventueel een terugkoppeling geven over de afmetingen van de standplaats. Voor bijzondere gevallen kun je mailen naar reserveringen@anwb.nl, zodat de ANWB contact kan opnemen met de camping.'
+                },
+                {
+                    question: 'Behalve onze bungalowtent nemen wij ook een extra tentje voor de kinderen mee. Hoe kan ik dat aangeven?',
+                    answer: 'Je kunt in het Engels of in de taal van het land van de camping in het veld Opmerkingen in de tweede stap van het reserveringsformulier aangeven dat jullie een bijzettentje hebben. De camping reageert daarop door aan te geven dat dat in orde is en wat de eventuele bijkomende kosten zijn. Bij sommige campings kun je een bijzettentje ook kiezen als extra optie.'
+                },
+                {
+                    question: 'Wij willen onze hond meenemen op vakantie. Hoe weet ik zeker dat hij mee kan?',
+                    answer: 'Kijk eerst bij de algemene informatie of honden zijn toegestaan. Meestal kun je bij het reserveren aangeven dat jullie één of meer honden meenemen. Als het onduidelijk is, kun je in het veld Opmerkingen in de tweede stap van het reserveringsformulier hier een vraag over stellen aan de camping. Doe dat in het Engels of in de taal van de camping. Ook bij campings die honden accepteren is het niet bij alle huuraccommodaties toegestaan om een hond mee te nemen. Dit staat vermeld bij de faciliteiten van de huuraccommodatie.'
+                },
+                {
+                    question: 'Ik kom er niet achter wat nu precies de verschillen zijn tussen de producten. Hebben jullie meer informatie?',
+                    answer: 'De ANWB probeert zo veel mogelijk informatie over de camping te publiceren op internet. Helaas wordt niet alles doorgegeven door de camping. Mocht er informatie ontbreken, dan kun je je vraag stellen aan reserveringen@anwb.nl. Vergeet niet de naam van de camping te vermelden. De ANWB vraagt dan aan de camping de extra informatie toe te toevoegen of probeert zelf deze vraag te beantwoorden.'
+                },
+                {
+                    question: 'Wat houdt de extra optie ‘Gegarandeerde standplaats’ in?',
+                    answer: 'Wanneer je zeker wilt zijn dat u een bepaalde kampeerplaats krijgt toegewezen, vink je deze optie aan. Vermeld bij de Opmerkingen in stap 2 aan om welke standplaats(en) het gaat.'
+                }
+            ]
+        },
+        {
+            title: 'Overige vragen',
+            qAndA: [
+                {
+                    question: 'Mijn vraag staat er niet tussen, hoe kan ik contact opnemen?',
+                    answer: 'Mocht je je antwoord niet kunnen terugvinden, dan ontvangen wij de vraag graag per e-mail via reserveringen@anwb.nl. Wij proberen de mails zo spoedig mogelijk te beantwoorden. Op werkdagen zijn wij telefonisch te bereiken op 088 - 269 2222 tussen 08.30 en 18.00 uur en op zaterdag van 10:00 tot 16:00 uur.' + <a href="mailto:reserveringen@anwb.nl">reserveringen@anwb.nl</a>
+                }
+            ]
+        }
+    ]
+
+    return jsonData;
+}
+
+export default FAQDataTsx;

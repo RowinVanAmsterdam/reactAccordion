@@ -25,7 +25,7 @@ const SingleCollapse = ({question, answer}: props) => {
                 <Icon name="arrow-right-thin" className='icon__svg' />
             </h4>
             <div className={`answer ${active}`}>
-                <p className='answer__body'>{answer}</p>
+                <p className='answer__body' dangerouslySetInnerHTML={{__html: answer}}/>
             </div>
         </li>
     );

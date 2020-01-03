@@ -15,6 +15,8 @@
     "react-scripts": "3.3.0",
     "sass": "^1.24.0",
     "serialize-javascript": "^2.1.2",
+    "tslint": "^5.20.1",
+    "tslint-react": "^4.1.0",
     "typescript": "^3.7.4"
   },
   "scripts": {

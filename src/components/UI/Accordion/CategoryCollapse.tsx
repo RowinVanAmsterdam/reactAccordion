@@ -1,37 +1,37 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import Icon from '../Shared/Icon';
 import SingleCollapse from './SingleCollapse';
 
-type props = {
+type CategoryCollapseProps = {
     title: string;
-    qAndA: {question: string, answer: string}[];
-}
+    qAndA: { question: string, answer: string }[];
+};
 
-const CategoryCollapse = (FAQDetail: props) => {
-    const [active, setActive] = React.useState('notActive');
-    const [isTrue, setTrue] = React.useState(false);
-
+export const CategoryCollapse = (faqDetail: CategoryCollapseProps) => {
+    const [isActive, setActive] = useState(false);
 
     const toggleAccordion = () => {
-        setActive(active === 'notActive' ? 'active' : 'notActive');
-        setTrue(!isTrue)
+        setActive(!isActive);
     };
 
     return (
-        <article className='faq__block' id='content-1'>
-            <h3 onClick={toggleAccordion} aria-expanded={isTrue}>
-                {FAQDetail.title}
-                <Icon name='arrow-right-thick' className='icon__svg' />
+        <article className="faq__block">
+            <h3 onClick={toggleAccordion} aria-expanded={isActive}>
+                {faqDetail.title}
+                <Icon name="arrow-right-thick" className="icon__svg" />
             </h3>
 
-
-            <ul className={active} id='questions-0' aria-expanded={isTrue}>
-                {FAQDetail.qAndA.map((qAndADetail) => {
-                    return <SingleCollapse question={qAndADetail.question} answer={qAndADetail.answer}/>
+            <ul className={isActive ? 'active' : 'not-active'} aria-expanded={isActive}>
+                {faqDetail.qAndA.map((qAndADetail, index) => {
+                    return (
+                        <SingleCollapse
+                            key={index}
+                            question={qAndADetail.question}
+                            answer={qAndADetail.answer}
+                        />
+                    );
                 })}
             </ul>
         </article>
-    )
-}
-
-export default CategoryCollapse;
+    );
+};
