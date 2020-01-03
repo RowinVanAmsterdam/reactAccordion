@@ -6,11 +6,11 @@
 
         .icon__svg {
             font-size: 27px;
-            // color: $yellow;
+            color: $yellow;
 
-            // @include respond-to(600px) {
-            //     font-size: 50px;
-            // }
+            @include respond-to(600px) {
+                font-size: 50px;
+            }
         }
 
         h2 {
@@ -18,10 +18,10 @@
             font-size: 18px;
             font-weight: normal;
 
-            // @include respond-to(600px) {
-            //     margin-top: 23px;
-            //     font-size: 28px;
-            // }
+            @include respond-to(600px) {
+                margin-top: 23px;
+                font-size: 28px;
+            }
         }
 
         p {
@@ -29,9 +29,9 @@
             text-align: left;
             font-weight: 300;
 
-            // @include respond-to(600px) {
-            //     font-size: 17px;
-            // }
+            @include respond-to(600px) {
+                font-size: 17px;
+            }
         }
     }
 

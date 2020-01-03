@@ -33,16 +33,16 @@
         font-size: 49px;
         height: 49px;
 
-        // @include respond-to(600px) {
-        //     font-size: 63px;
-        //     height: 63px;
-        //     margin-right: 10px;
-        // }
+        @include respond-to(600px) {
+            font-size: 63px;
+            height: 63px;
+            margin-right: 10px;
+        }
     }
 
     .icon__content {
         color: #FFF;
-        // font-family: $font-family-base;
+        font-family: $font-family-base;
         font-size: 22px;
         font-weight: bold;
         transform: translate(-50%, -61%);

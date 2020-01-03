@@ -1,8 +1,5 @@
 import * as React from 'react';
 import Icon from '../Shared/Icon';
-import '../../../assets/css/base/_grid.scss';
-import '../../../assets/css/layout/_icons.scss';
-import '../../../assets/css/components/_faq.scss';
 
 type props = {
     question: string;
