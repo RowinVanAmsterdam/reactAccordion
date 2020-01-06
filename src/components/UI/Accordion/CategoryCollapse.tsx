@@ -5,10 +5,11 @@ import SingleCollapse from './SingleCollapse';
 type CategoryCollapseProps = {
     title: string;
     qAndA: { question: string, answer: string }[];
+    shouldOpenFirstCategory: boolean;
 };
 
-export const CategoryCollapse = (faqDetail: CategoryCollapseProps) => {
-    const [isActive, setActive] = useState(false);
+export const CategoryCollapse = (props: CategoryCollapseProps) => {
+    const [isActive, setActive] = useState(props.shouldOpenFirstCategory);
 
     const toggleCollapse = () => {
         setActive(!isActive);
@@ -17,12 +18,12 @@ export const CategoryCollapse = (faqDetail: CategoryCollapseProps) => {
     return (
         <article className="faq__block">
             <h3 onClick={toggleCollapse} aria-expanded={isActive}>
-                {faqDetail.title}
+                {props.title}
                 <Icon name="arrow-right-thick" className="icon__svg" />
             </h3>
 
             <ul className={isActive ? 'active' : 'not-active'} aria-expanded={isActive}>
-                {faqDetail.qAndA.map((qAndADetail, index) => {
+                {props.qAndA.map((qAndADetail, index) => {
                     return (
                         <SingleCollapse
                             key={index}

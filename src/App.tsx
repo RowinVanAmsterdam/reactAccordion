@@ -5,7 +5,7 @@ import './App.css';
 
 const App = () => {
   return (
-      <Accordion />
+      <Accordion openFirstCategory={true} />
   );
 };
 
