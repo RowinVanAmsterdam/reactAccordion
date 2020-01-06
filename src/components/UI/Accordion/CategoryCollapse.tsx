@@ -10,13 +10,13 @@ type CategoryCollapseProps = {
 export const CategoryCollapse = (faqDetail: CategoryCollapseProps) => {
     const [isActive, setActive] = useState(false);
 
-    const toggleAccordion = () => {
+    const toggleCollapse = () => {
         setActive(!isActive);
     };
 
     return (
         <article className="faq__block">
-            <h3 onClick={toggleAccordion} aria-expanded={isActive}>
+            <h3 onClick={toggleCollapse} aria-expanded={isActive}>
                 {faqDetail.title}
                 <Icon name="arrow-right-thick" className="icon__svg" />
             </h3>

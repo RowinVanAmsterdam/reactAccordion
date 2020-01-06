@@ -1,29 +1,27 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import Icon from '../Shared/Icon';
 
-type props = {
+type SingleCollapseProps = {
     question: string;
     answer: string;
 };
 
-const SingleCollapse = ({question, answer}: props) => {
+const SingleCollapse = ({ question, answer }: SingleCollapseProps) => {
 
-    const [active, setActive] = React.useState('notActive');
-    const [isTrue, setTrue] = React.useState(false);
+    const [isActive, setActive] = useState(false);
 
-    const toggleAccordion = () => {
-        setActive(active === 'notActive' ? 'active' : 'notActive');
-        setTrue(!isTrue);
+    const toggleCollapse = () => {
+        setActive(!isActive);
     };
 
     return (
-        <li onClick={toggleAccordion} className="question" aria-expanded={isTrue}>
-            <h4 onClick={toggleAccordion} aria-expanded={isTrue}>
+        <li onClick={toggleCollapse} className="question" aria-expanded={isActive}>
+            <h4 >
                 {question}
                 <Icon name="arrow-right-thin" className="icon__svg" />
             </h4>
-            <div className={`answer ${active}`}>
-                <p className="answer__body" dangerouslySetInnerHTML={{__html: answer}}/>
+            <div className={`answer ${isActive ? 'active' : 'not-active'}`}>
+                <p className="answer__body" dangerouslySetInnerHTML={{ __html: answer }} />
             </div>
         </li>
     );
