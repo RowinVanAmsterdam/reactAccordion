@@ -6,22 +6,20 @@ type AccordionProps = {
     openFirstCategory: boolean;
 };
 
-const Accordion = ({openFirstCategory}: AccordionProps) => {
+export const Accordion = ({ openFirstCategory }: AccordionProps) => {
 
     return (
         <div className="container container--xtiny">
             {FAQData.map((faqDetail, index) => {
-                let shouldOpenFirstCategory = false; 
+                let shouldOpenFirstCategory = false;
 
                 if (openFirstCategory && index === 0) {
-                    shouldOpenFirstCategory = true; 
+                    shouldOpenFirstCategory = true;
                 }
-                
-                return <CategoryCollapse key={index} {...faqDetail}  shouldOpenFirstCategory={shouldOpenFirstCategory} />;
+
+                return <CategoryCollapse key={index} {...faqDetail} shouldOpenFirstCategory={shouldOpenFirstCategory} />;
             })}
         </div>
     );
 
 };
-
-export default Accordion;

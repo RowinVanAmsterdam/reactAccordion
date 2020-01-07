@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import Icon from '../Shared/Icon';
+import AnimateHeight from 'react-animate-height';
 
 type SingleCollapseProps = {
     question: string;
     answer: string;
 };
 
-const SingleCollapse = ({ question, answer }: SingleCollapseProps) => {
-
+export const SingleCollapse = ({ question, answer }: SingleCollapseProps) => {
     const [isActive, setActive] = useState(false);
 
     const toggleCollapse = () => {
@@ -20,11 +20,14 @@ const SingleCollapse = ({ question, answer }: SingleCollapseProps) => {
                 {question}
                 <Icon name="arrow-right-thin" className="icon__svg" />
             </h4>
-            <div className={`answer ${isActive ? 'active' : 'not-active'}`}>
-                <p className="answer__body" dangerouslySetInnerHTML={{ __html: answer }} />
-            </div>
+            <AnimateHeight
+                duration={500}
+                height={isActive ? 'auto' : 0}
+            >
+                <div className="answer">
+                    <p className="answer__body" dangerouslySetInnerHTML={{ __html: answer }} />
+                </div>
+            </AnimateHeight>
         </li>
     );
 };
-
-export default SingleCollapse;

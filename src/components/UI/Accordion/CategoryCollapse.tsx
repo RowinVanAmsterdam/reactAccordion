@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Icon from '../Shared/Icon';
-import SingleCollapse from './SingleCollapse';
+import { SingleCollapse } from './SingleCollapse';
+import AnimateHeight from 'react-animate-height';
 
 type CategoryCollapseProps = {
     title: string;
@@ -21,18 +22,22 @@ export const CategoryCollapse = (props: CategoryCollapseProps) => {
                 {props.title}
                 <Icon name="arrow-right-thick" className="icon__svg" />
             </h3>
-
-            <ul className={isActive ? 'active' : 'not-active'} aria-expanded={isActive}>
-                {props.qAndA.map((qAndADetail, index) => {
-                    return (
-                        <SingleCollapse
-                            key={index}
-                            question={qAndADetail.question}
-                            answer={qAndADetail.answer}
-                        />
-                    );
-                })}
-            </ul>
+            <AnimateHeight
+                duration={500}
+                height={isActive ? 'auto' : 0}
+            >
+                <ul aria-expanded={isActive}>
+                    {props.qAndA.map((qAndADetail, index) => {
+                        return (
+                            <SingleCollapse
+                                key={index}
+                                question={qAndADetail.question}
+                                answer={qAndADetail.answer}
+                            />
+                        );
+                    })}
+                </ul>
+            </AnimateHeight>
         </article>
     );
 };

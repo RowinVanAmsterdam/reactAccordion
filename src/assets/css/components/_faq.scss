@@ -68,11 +68,6 @@
                     transform: rotate(270deg);
                 }
             }
-
-        }
-
-        .not-active {
-            display: none;
         }
 
         .question {
@@ -87,6 +82,7 @@
                 border-bottom-color: #DBDBDB;
                 cursor: pointer;
                 transition: .1s background-color ease-in-out, .1s border-color ease-in-out;
+                
 
                 .icon__svg {
                     top: 19px;

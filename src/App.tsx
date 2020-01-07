@@ -1,12 +1,10 @@
 import React from 'react';
-import Accordion from './components/UI/Accordion/Accordion';
+import { Accordion } from './components/UI/Accordion/Accordion';
 import './assets/css/anwb.scss';
 import './App.css';
 
-const App = () => {
+export const App = () => {
   return (
-      <Accordion openFirstCategory={true} />
+    <Accordion openFirstCategory={true} />
   );
 };
-
-export default App;
