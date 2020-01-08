@@ -1,25 +1,19 @@
 import React from 'react';
 import { Route, useParams, Link, Switch } from 'react-router-dom';
-import './assets/css/anwb.scss';
+import { GetMovies } from './api/GetMovies';
 
 const GetParams = () => {
     let { id } = useParams();
     return <p>{id}</p>;
 };
 
-export const Movies = () => {
+export const Movies =  () => {
+    // const data = await GetMovies;
     let { id } = useParams();
-
-    // const getSwapiData = async () => {
-    //     const url = 'https://swapi.co/api/films';
-    //     const swapiResponse = await fetch(url);
-    //     const swapiData = await swapiResponse.json();
-    //     return swapiData;
-    // };
 
     return (
         <div>
-            {/* <p>{getSwapiData}</p> */}
+            <GetMovies />
             <h1>Movies</h1>
             <h2>Selected movie: {id}</h2>
             <h2>Select a movie:</h2>
