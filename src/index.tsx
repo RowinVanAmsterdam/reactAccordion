@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Route, Link, BrowserRouter as Router, Switch } from 'react-router-dom';
 import './index.css';
 import { App } from './App';
-import { Movies } from './Movies';
+import { Movies } from './Movies/Movies';
 import { NotFound } from './NotFound';
 import * as serviceWorker from './serviceWorker';
 
@@ -23,6 +23,7 @@ const routing = (
 
             <Switch>
             <Route exact={true} path="/" component={App} />
+            <Route path="/movies/:id?" component={Movies} />
             <Route path="/movies/:id?" component={Movies} />
             <Route component={NotFound} />
             </Switch>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { PaginatedResponse } from '../Movies/types/PaginatedResponse';
-import { Film } from '../Movies/types/Film';
+import { PaginatedResponse } from '../types/PaginatedResponse';
+import { Film } from '../types/Film';
 
 export const useMovies = () => {
     const [movies, setMovies] = useState<PaginatedResponse<Film>>();

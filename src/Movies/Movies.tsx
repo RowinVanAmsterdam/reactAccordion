@@ -13,13 +13,25 @@ export const Movies = () => {
 
     return (
         <div>
-            {console.log(movies)}
-            {movies &&
-                <p>{movies.results.map((movie, index) => <div key={index}>{movie.title}</div>)}</p>
-            }
             <h1>Movies</h1>
             <h2>Selected movie: {id}</h2>
             <h2>Select a movie:</h2>
+            {movies &&
+                (
+                <ul>
+                    {console.log(movies)}
+                    {movies.results.map((movie, index) => {
+                        return (
+                            <li key={index}>
+                                <Link to={`/movies/${movie.title}`}>{movie.title}</Link>
+                            </li>
+                        );
+                    })
+                    }
+                </ul>
+                )
+            }
+
             <ul>
                 <li>
                     <Link to="/movies/1">Movie 1 </Link>
