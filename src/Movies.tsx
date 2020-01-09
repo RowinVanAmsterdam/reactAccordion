@@ -1,19 +1,22 @@
 import React from 'react';
 import { Route, useParams, Link, Switch } from 'react-router-dom';
-import { GetMovies } from './api/GetMovies';
+import { useMovies } from './api/useMovies';
 
 const GetParams = () => {
     let { id } = useParams();
     return <p>{id}</p>;
 };
 
-export const Movies =  () => {
-    // const data = await GetMovies;
+export const Movies = () => {
     let { id } = useParams();
+    const movies = useMovies();
 
     return (
         <div>
-            <GetMovies />
+            {console.log(movies)}
+            {movies &&
+                <p>{movies.results.map((movie, index) => <div key={index}>{movie.title}</div>)}</p>
+            }
             <h1>Movies</h1>
             <h2>Selected movie: {id}</h2>
             <h2>Select a movie:</h2>

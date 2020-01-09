@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import { PaginatedResponse } from '../Movies/types/PaginatedResponse';
+import { Film } from '../Movies/types/Film';
 
-export const GetMovies = () => {
-    const [movies, setMovies] = useState();
+export const useMovies = () => {
+    const [movies, setMovies] = useState<PaginatedResponse<Film>>();
 
     const fetchMovieData = async () => {
         try {
             const movieDataResponse = await fetch('https://swapi.co/api/films/');
             const movieData = await movieDataResponse.json();
-            // return movieData;
             setMovies(movieData);
         } catch (e) {
             console.log(e);
@@ -16,13 +17,7 @@ export const GetMovies = () => {
 
     useEffect(() => {
         fetchMovieData();
-    });
+    }, []);
 
-    // return movies;
-    console.log(movies);
-    return (
-        <div>
-            <p>{JSON.stringify(movies)}</p>
-        </div>
-    );
+    return movies;
 };
