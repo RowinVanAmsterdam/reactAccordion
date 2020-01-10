@@ -24,8 +24,8 @@ const routing = (
 
             <Switch>
             <Route exact={true} path="/" component={App} />
+            <Route path="/movies/:id" component={MovieDetail} />
             <Route path="/movies" component={Movies} />
-            <Route path="/movie/:id" component={MovieDetail} />
             <Route component={NotFound} />
             </Switch>
         </div>
