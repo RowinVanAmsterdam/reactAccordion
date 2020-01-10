@@ -6,6 +6,7 @@ import { App } from './App';
 import { Movies } from './Movies/Movies';
 import { NotFound } from './NotFound';
 import * as serviceWorker from './serviceWorker';
+import { MovieDetail } from './Movies/MovieDetail';
 
 const routing = (
     <Router>
@@ -23,8 +24,8 @@ const routing = (
 
             <Switch>
             <Route exact={true} path="/" component={App} />
-            <Route path="/movies/:id?" component={Movies} />
-            <Route path="/movies/:id?" component={Movies} />
+            <Route path="/movies" component={Movies} />
+            <Route path="/movie/:id" component={MovieDetail} />
             <Route component={NotFound} />
             </Switch>
         </div>
