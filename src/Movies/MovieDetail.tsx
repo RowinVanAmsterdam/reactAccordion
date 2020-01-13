@@ -1,17 +1,16 @@
 import React from 'react';
 // import { PaginatedResponse } from './types/PaginatedResponse';
-// import { Film } from './types/Film';
 
 export const MovieDetail = (props: any) => {
+    console.log(props);
+    console.log(props.location.state);
+    const movie = props.location.state;
 
     return (
         <>
-            {console.log(props)}
-            {/* {props && 
-            <h1>Movie Title: {props.results.map(movie => movie.title)}</h1>
-        } */}
-            <h1>Movie title:</h1>
-            <h2>f</h2>
+            <h1>Movie: {movie.title}</h1>
+            <p>Director: {movie.director}</p>
+            <p>Producer: {movie.producer}</p>
         </>
     );
 };

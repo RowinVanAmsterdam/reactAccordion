@@ -16,7 +16,7 @@ export const Movies = () => {
                         {movies.results.map((movie, index) => {
                             return (
                                 <li key={index}>
-                                    <Link to={{ pathname: `/movies/${movie.title}`, state: 'hiFromMovies' }}>{movie.title}</Link>
+                                    <Link to={{ pathname: `/movies/${movie.title}`, state: movie }}>{movie.title}</Link>
                                     {/* <Link to={`/movies/${movie.title}`} {...movie}>{movie.title}</Link> */}
                                 </li>
                             );
@@ -25,9 +25,6 @@ export const Movies = () => {
                     </ul>
                 )
             }
-            {/* <Switch>
-                <Route exact={true} path="/movies/:id" component={MovieDetail} {...movies} />
-            </Switch> */}
         </div>
     );
 };
